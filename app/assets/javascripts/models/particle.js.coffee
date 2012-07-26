@@ -19,7 +19,7 @@ class Emit.Models.Particle extends Emit.Util.BaseModel
     accels = for interactor in interactors
       [dx, dy] = [(interactor.x - @x), (interactor.y - @y)]
       r = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2))
-      a = (Emit.world.gravity * interactor.mass) / Math.pow(r, 2)
+      a = (Emit.world.gravity * interactor.mass) / Math.pow(r, 2) * interactor.polarity
       axs.push a*(dx/r)
       ays.push a*(dy/r)
     return [axs, ays]

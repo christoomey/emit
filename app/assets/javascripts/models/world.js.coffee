@@ -28,8 +28,8 @@ class Emit.Models.World extends Emit.Util.BaseModel
       @emitters.push emitter
 
   initInteractors: =>
-    for i in [1..3]
-      padding = 5
+    for i in [1..15]
+      padding = 15
       x = @randomInt(@width - padding, @margin + padding)
       y = @randomInt(@height - padding, @margin + padding)
       attractor = new Emit.Models.Attractor x, y, @width, @height

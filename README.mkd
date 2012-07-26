@@ -1,0 +1,14 @@
+## Emit
+
+Emit is a simple experiment in canvas based 2D animation in the browser. It presents
+a pysics simulation representing the attraction and avoidance of various particles.
+
+Currently the build process is mostly manual. Eventually I plan to automate these
+steps.
+
+- Compile the js & css manifest files with `rake assets:precompile`
+- Fire up the server as production with `rails s -p 1233 -e production`
+- Curl the index.html into public directory with
+    `curl http://localhost:1233/ > public/index.html`
+- Update the asset links to be relative (they are served from a subdirectory of
+    my blog) `/assets/application.js => assets/application.js`

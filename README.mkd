@@ -12,3 +12,4 @@ steps.
     `curl http://localhost:1233/ > public/index.html`
 - Update the asset links to be relative (they are served from a subdirectory of
     my blog) `/assets/application.js => assets/application.js`
+- Kill the server with `kill -9 $(cat tmp/pids/server.pid)`
